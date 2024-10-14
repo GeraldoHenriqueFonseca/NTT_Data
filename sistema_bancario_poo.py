@@ -28,7 +28,7 @@ class Conta:
     def __init__(self, numero, cliente):
         self._saldo = 0
         self._numero = numero
-        self._agencia = "0001"
+        self._agencia = "42"
         self._cliente = cliente
         self._historico = Historico()
 
@@ -66,7 +66,7 @@ class Conta:
 
         elif valor > 0:
             self._saldo -= valor
-            print("\n Saque realizado com sucesso! ")
+            print("\nSaque realizado com sucesso! ")
             return True
 
         else:
@@ -77,7 +77,7 @@ class Conta:
     def depositar(self, valor):
         if valor > 0:
             self._saldo += valor
-            print("\n Depósito realizado com sucesso! ")
+            print("\nDepósito realizado com sucesso! ")
         else:
             print("\nOperação falhou! O valor informado é inválido.")
             return False
@@ -253,7 +253,7 @@ def exibir_extrato(clientes):
     if not conta:
         return
 
-    print("\n= EXTRATO =")
+    print("\n EXTRATO")
     transacoes = conta.historico.transacoes
 
     extrato = ""
